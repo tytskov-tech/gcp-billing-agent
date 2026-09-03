@@ -123,7 +123,7 @@ You can now use the fully functional agent directly in your GCP BigQuery console
 1. ##### Copy JSON agent cart
 
    After saving the agent, click the Publish button and copy the JSON payload to your clipboard. You can save this to a file for later use when adding the agent to your Gemini Enterprise (GE) application. If you forget to copy it now, you can re-save and publish the agent at any time.  
-   ![][image1]
+   ![Pic1][image_1.png]
 
 2. ##### Open your Gemini Enterprise application or create a new one, and navigate to the Agents menu. Press Add Agent
 
