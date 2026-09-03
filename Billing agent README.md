@@ -106,7 +106,7 @@ bq update --description "The table contains the Detailed Usage Cost Export data,
 
 4. ##### Add 3 (or 4, if including recommendations) source BQ tables.
 
-5. ##### Copy the prompt from the [Instructions](https://docs.google.com/document/d/1XWYrKPvnOP2wUuaOCecmXhXglgr8gGVW0yFhaidMgyQ/edit?pli=1&resourcekey=0-HWlxQbMKUMkgZ-eoPCTW0A&tab=t.0#heading=h.mz0qixxpf8hw) section below and paste it into the agent's instructions field.
+5. ##### Copy the prompt from the [Instructions](#Instructions) section below and paste it into the agent's instructions field.
 
 6. ##### Add the queries from the “[Golden queries](#golden-queries)” section below. These queries will help establish a standard format for the agent when it generates new queries for you. Replace `<Your_Billng Account>` in the tables name to your actual Billing account, and `<billingexport_ds>` to your export dataset name.
 
