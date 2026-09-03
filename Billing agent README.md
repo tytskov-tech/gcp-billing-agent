@@ -56,17 +56,17 @@
 
       2. ##### ***BigQuery Data Viewer*** (roles/bigquery.dataViewer): Required on the specific dataset, table, or view used as a knowledge source.
 
-5. ### Next Steps
+## Next Steps
 
-1. ## Ensure your BigQuery datasets are properly configured for these exports.
+1. #### Ensure your BigQuery datasets are properly configured for these exports.
 
-2. Setting up all datasets within the same region simplifies subsequent table joins.
+2. #### Setting up all datasets within the same region simplifies subsequent table joins.
 
-3. ## Refer to the [BigQuery Billing Export documentation](https://docs.cloud.google.com/billing/docs/how-to/export-data-bigquery) for setup instructions.
+3. #### Refer to the [BigQuery Billing Export documentation](https://docs.cloud.google.com/billing/docs/how-to/export-data-bigquery) for setup instructions.
 
-4. ## Begin building your analysis queries using the provided schema references in the system prompt.
+4. #### Begin building your analysis queries using the provided schema references in the system prompt.
 
-5. [Export recommendations to BigQuery](https://docs.cloud.google.com/recommender/docs/bq-export/export-recommendations-to-bq) 
+5. #### [Export recommendations to BigQuery](https://docs.cloud.google.com/recommender/docs/bq-export/export-recommendations-to-bq) 
 
 # Create new BQ Agent
 
