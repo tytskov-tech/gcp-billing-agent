@@ -444,15 +444,16 @@ All added users can now see the agent in the Gemini Enterprise (GE) App and subm
 
    
 
-   `SELECT service.description,`  
-   `CORR(usage.amount, cost) AS correlation`  
-   `` FROM `<billingexport_ds>.gcp_billing_export_resource_<Your_BA>` ``  
-   `WHERE`  
-    	`_PARTITIONTIME`  
-    		`BETWEEN TIMESTAMP('2023-01-01 00:00:00')`  
-    		`AND TIMESTAMP('2023-03-01 00:00:00')`  
-   `GROUP BY 1`  
-   `HAVING AVG(cost) > 100;`  
+   ```SELECT service.description,
+CORR(usage.amount, cost) AS correlation
+FROM <billingexport_ds>.gcp_billing_export_resource_<Your_BA>
+WHERE
+ 	_PARTITIONTIME
+ 		BETWEEN TIMESTAMP('2023-01-01 00:00:00')
+ 		AND TIMESTAMP('2023-03-01 00:00:00')
+GROUP BY 1
+HAVING AVG(cost) > 100;
+```
    
 
 2. ###### *Calculate the cost variation (standard deviation) for each location's region, considering only costs above the 75th percentile.*
