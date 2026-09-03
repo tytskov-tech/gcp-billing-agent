@@ -128,16 +128,17 @@ You can now use the fully functional agent directly in your GCP BigQuery console
 
 3. ##### Open your Gemini Enterprise application or create a new one, and navigate to the Agents menu. Press Add Agent
 
-   ![][image2]  
+![Pic2](image_2.png) 
    
 
 4. ##### In Add an Agent window select Custom agent via A2A
 
-![][image3]
+![Pic3](image_3.png)
 
 4. ##### Paste the previously copied JSON into the Agent Card JSON field and press Preview Agent Details, you will see description of your BG CA agent
 
-   ![][image4]  
+![Pic4](image_4.png)
+
 5. Configure Agent authorization   
    1. [Configure authorization details](https://docs.cloud.google.com/gemini/enterprise/docs/register-and-manage-an-a2a-agent#authorize-your-agent)  
    2. [Complete the setup](https://docs.cloud.google.com/gemini/enterprise/docs/register-and-manage-an-a2a-agent#register-agent)  
