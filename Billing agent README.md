@@ -463,11 +463,11 @@ HAVING AVG(cost) > 100;
 
 ```sql
 SELECT location.region, STDDEV(cost)
-FROM `<billingexport_ds>.gcp_billing_export_resource_v1_01E700_45A45B_F55F2E`
+FROM `<billingexport_ds>.gcp_billing_export_resource_v1_<Your_BA>`
 WHERE
  cost > (
    SELECT APPROX_QUANTILES(cost, 4)[OFFSET(3)]
-   FROM `billing.gcp_billing_export_resource_<Your_BA>`
+   FROM `<billingexport_ds>.gcp_billing_export_resource_<Your_BA>`
    WHERE
      _PARTITIONTIME
      BETWEEN TIMESTAMP('2026-01-01 00:00:00')
