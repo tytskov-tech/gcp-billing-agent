@@ -56,9 +56,7 @@
 
       2. ##### ***BigQuery Data Viewer*** (roles/bigquery.dataViewer): Required on the specific dataset, table, or view used as a knowledge source.
 
-5. 
-
-## Next Steps
+5. ### Next Steps
 
 1. ## Ensure your BigQuery datasets are properly configured for these exports.
 
