@@ -1,0 +1,436 @@
+[
+  {
+    "mode": "NULLABLE",
+    "name": "billing_account_id",
+    "type": "STRING",
+    "description": "Essential for multi-account cost consolidation, organizational financial governance, and segregating spend across different legal entities or business units."
+  },
+  {
+    "fields": [
+      {
+        "mode": "NULLABLE",
+        "name": "id",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "description",
+        "type": "STRING",
+        "description": "Perform high-level spend analysis to identify which specific Google Cloud products are the primary cost drivers for prioritization of optimization efforts."
+      }
+    ],
+    "mode": "NULLABLE",
+    "name": "service",
+    "type": "RECORD"
+  },
+  {
+    "fields": [
+      {
+        "mode": "NULLABLE",
+        "name": "id",
+        "type": "STRING",
+        "description": "Critical for rate card analysis, unit price verification, and mapping line items to list prices for deep-dive resource optimization."
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "description",
+        "type": "STRING",
+        "description": "Helps analysts identify specific resource classes, machine types, or storage tiers to provide granular rightsizing or tiering recommendations."
+      }
+    ],
+    "mode": "NULLABLE",
+    "name": "sku",
+    "type": "RECORD"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "usage_start_time",
+    "type": "TIMESTAMP",
+    "description": "Analyze cost spikes at a granular hourly level to identify batch jobs, peak usage periods, or idle resources during non-business hours."
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "usage_end_time",
+    "type": "TIMESTAMP",
+    "description": "Used to calculate usage duration for ephemeral workloads and verify billing cycle alignment for precise cost-per-hour calculations."
+  },
+  {
+    "fields": [
+      {
+        "mode": "NULLABLE",
+        "name": "id",
+        "type": "STRING",
+        "description": "Primary dimension for cost allocation, departmental chargeback/showback, and identifying \"zombie\" or \"orphan\" projects with no active ownership."
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "number",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "name",
+        "type": "STRING",
+        "description": "Enhance visibility in reports for non-technical stakeholders by using friendly project naming conventions."
+      },
+      {
+        "fields": [
+          {
+            "mode": "NULLABLE",
+            "name": "key",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "value",
+            "type": "STRING"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "labels",
+        "type": "RECORD",
+        "description": "Automate cost attribution to specific cost centers, environments, or business units based on project-level metadata."
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ancestry_numbers",
+        "type": "STRING",
+        "description": "Aggregate costs across entire folders or business units to enable hierarchical spend analysis and department-wide chargebacks."
+      },
+      {
+        "fields": [
+          {
+            "mode": "NULLABLE",
+            "name": "resource_name",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "display_name",
+            "type": "STRING"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "ancestors",
+        "type": "RECORD"
+      }
+    ],
+    "mode": "NULLABLE",
+    "name": "project",
+    "type": "RECORD"
+  },
+  {
+    "fields": [
+      {
+        "mode": "NULLABLE",
+        "name": "key",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "value",
+        "type": "STRING"
+      }
+    ],
+    "mode": "REPEATED",
+    "name": "labels",
+    "type": "RECORD",
+    "description": "The most granular mechanism for cost attribution; used to allocate spend to specific applications, microservices, environments (prod/dev), or owners."
+  },
+  {
+    "fields": [
+      {
+        "mode": "NULLABLE",
+        "name": "key",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "value",
+        "type": "STRING"
+      }
+    ],
+    "mode": "REPEATED",
+    "name": "system_labels",
+    "type": "RECORD",
+    "description": "Analyze reservation utilization (used vs. unused capacity) and perform rightsizing analysis based on machine configurations."
+  },
+  {
+    "fields": [
+      {
+        "mode": "NULLABLE",
+        "name": "location",
+        "type": "STRING",
+        "description": "Identify high-spend regions and evaluate cost-saving opportunities by migrating workloads to cheaper geographic locations."
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "country",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "region",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "zone",
+        "type": "STRING"
+      }
+    ],
+    "mode": "NULLABLE",
+    "name": "location",
+    "type": "RECORD"
+  },
+  {
+    "fields": [
+      {
+        "mode": "NULLABLE",
+        "name": "key",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "value",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "inherited",
+        "type": "BOOLEAN"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "namespace",
+        "type": "STRING"
+      }
+    ],
+    "mode": "REPEATED",
+    "name": "tags",
+    "type": "RECORD",
+    "description": "Implement standardized, non-mutable cost allocation and policy-driven governance that cannot be bypassed by users."
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "transaction_type",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "seller_name",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "export_time",
+    "type": "TIMESTAMP",
+    "description": "Monitor data freshness and ensure the recommendation engine is analyzing the most recent available billing cycle data."
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "cost",
+    "type": "FLOAT",
+    "description": "Used to track gross spend, calculate burn rates, and serve as the baseline metric for cost-based KPIs and ROI calculations."
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "currency",
+    "type": "STRING",
+    "description": "Handle multi-currency reporting and normalize global spend into a single functional currency for unified financial views."
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "currency_conversion_rate",
+    "type": "FLOAT"
+  },
+  {
+    "fields": [
+      {
+        "mode": "NULLABLE",
+        "name": "amount",
+        "type": "FLOAT",
+        "description": "Measure consumption volume independently of price to detect resource bloat, inefficiency, or usage-based anomalies."
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "unit",
+        "type": "STRING",
+        "description": "Standardize usage metrics across different services to calculate unit economics and validate technical architecture designs."
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "amount_in_pricing_units",
+        "type": "FLOAT"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "pricing_unit",
+        "type": "STRING"
+      }
+    ],
+    "mode": "NULLABLE",
+    "name": "usage",
+    "type": "RECORD"
+  },
+  {
+    "fields": [
+      {
+        "mode": "NULLABLE",
+        "name": "name",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "amount",
+        "type": "FLOAT"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "full_name",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "id",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "type",
+        "type": "STRING"
+      }
+    ],
+    "mode": "REPEATED",
+    "name": "credits",
+    "type": "RECORD",
+    "description": "Evaluate the effectiveness of savings programs and calculate \"Net Cost\" by subtracting credits from the gross cost."
+  },
+  {
+    "fields": [
+      {
+        "mode": "NULLABLE",
+        "name": "month",
+        "type": "STRING",
+        "description": "Primary field for reconciling exported BigQuery data with official monthly financial statements and tracking budget adherence over time."
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "publisher_type",
+        "type": "STRING"
+      }
+    ],
+    "mode": "NULLABLE",
+    "name": "invoice",
+    "type": "RECORD"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "cost_type",
+    "type": "STRING",
+    "description": "Filter between actual resource consumption and administrative costs like taxes or financial adjustments for precise unit economics analysis."
+  },
+  {
+    "fields": [
+      {
+        "mode": "NULLABLE",
+        "name": "id",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "description",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "mode",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "type",
+        "type": "STRING",
+        "description": "Track recovery of funds from SLA violations or audit financial corrections to ensure billing accuracy."
+      }
+    ],
+    "mode": "NULLABLE",
+    "name": "adjustment_info",
+    "type": "RECORD"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "cost_at_list",
+    "type": "FLOAT",
+    "description": "Compare list price vs. effective price to quantify the total savings generated by FinOps negotiations and discount programs."
+  },
+  {
+    "fields": [
+      {
+        "mode": "NULLABLE",
+        "name": "effective_price",
+        "type": "NUMERIC"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "tier_start_amount",
+        "type": "NUMERIC"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "unit",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "pricing_unit_quantity",
+        "type": "NUMERIC"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "list_price",
+        "type": "NUMERIC"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "effective_price_default",
+        "type": "NUMERIC"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "list_price_consumption_model",
+        "type": "NUMERIC"
+      }
+    ],
+    "mode": "NULLABLE",
+    "name": "price",
+    "type": "RECORD"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "cost_at_effective_price_default",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "cost_at_list_consumption_model",
+    "type": "FLOAT"
+  },
+  {
+    "fields": [
+      {
+        "mode": "NULLABLE",
+        "name": "id",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "description",
+        "type": "STRING"
+      }
+    ],
+    "mode": "NULLABLE",
+    "name": "consumption_model",
+    "type": "RECORD"
+  }
+]
