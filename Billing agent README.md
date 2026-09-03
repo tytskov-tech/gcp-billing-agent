@@ -444,7 +444,8 @@ All added users can now see the agent in the Gemini Enterprise (GE) App and subm
 
    
 
-   ```SELECT service.description,
+   ```sql
+SELECT service.description,
 CORR(usage.amount, cost) AS correlation
 FROM <billingexport_ds>.gcp_billing_export_resource_<Your_BA>
 WHERE
