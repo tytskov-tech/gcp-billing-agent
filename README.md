@@ -19,3 +19,4 @@ However, raw BigQuery tables are useless to a financial analyst who doesn't writ
 ## The Solution: A Conversational FinOps Agent
 A BigQuery Conversational Analytics Agent is an AI-powered bridge between human language and complex cloud data. Instead of requiring a user to know database schemas or SQL syntax, the agent acts as a bilingual translator. It takes a question asked in natural language, uses a Large Language Model to translate that intent into optimized BigQuery SQL, executes the query against the data warehouse, and then translates the resulting rows and columns back into a natural, conversational response. It effectively turns a massive, rigid data warehouse into an interactive chatbot.
 To democratize cloud cost visibility, we connected an LLM directly to our FinOps data warehouse.
+[For more information and examples, please visit ](https://medium.com/google-cloud/cloud-financial-management-finops-has-a-notorious-communication-gap-5203dcefa878).
