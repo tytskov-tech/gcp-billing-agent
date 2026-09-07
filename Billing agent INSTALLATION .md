@@ -487,12 +487,12 @@ GROUP BY 1;
 SELECT
  invoice.month,
  sku.description,
- (
+ SAFE_DIVIDE((
    SUM(cost)
    - LAG(SUM(cost), 1, 0)
      OVER (PARTITION BY sku.description ORDER BY invoice.month))
    / LAG(SUM(cost), 1, 0)
-     OVER (PARTITION BY sku.description ORDER BY invoice.month)
+     OVER (PARTITION BY sku.description ORDER BY invoice.month))
    AS percentage_change
 FROM `<billingexport_ds>.gcp_billing_export_resource_v1_<Your_BA>`
 WHERE
